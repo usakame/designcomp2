@@ -823,10 +823,11 @@ line-height: 50px;
 }
 .news .list time{
   font-size: 1rem;
+  margin-right:60px;
 }
 .news .list .text{
   font-size: 1rem;
-  width: calc(100% - 97px);
+  width: calc(100% - 147px);
 }
 .news .list li{
   padding-bottom: 40px;

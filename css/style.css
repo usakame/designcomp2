@@ -404,11 +404,11 @@ line-height: 50px;
   .news .time{
     font-size: 0.875rem;
     display: inline-block;
-    width: 102px;
+    margin-right: 16px;
   }
   .news .text{
     font-size: 0.875rem;
-    width: calc(100% - 102px);
+    width: calc(100% - 87px);
     display: inline-block;
     overflow-x: hidden;
     white-space: nowrap;
@@ -823,11 +823,10 @@ line-height: 50px;
 }
 .news .list time{
   font-size: 1rem;
-  width: 172px;
 }
 .news .list .text{
   font-size: 1rem;
-  width: calc(100% - 172px);
+  width: calc(100% - 97px);
 }
 .news .list li{
   padding-bottom: 40px;

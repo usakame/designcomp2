@@ -581,7 +581,7 @@ line-height: 50px;
 /* モバイルのfooter */
 .footer {
   background: #AAAAAA;
-  paddinge: 0 5.3% 50px;
+  padding: 0 5.3% 50px;
 }
 .footer .wrapper{
   max-width: 1080px;

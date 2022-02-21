@@ -1,0 +1,960 @@
+@charset "UTF-8";
+
+/* 共通クラス */
+body {
+  margin: 0;
+  font-family:Helvetica, Arial,'游ゴシック','Yu Gothic','ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ','Meiryo','MS Pゴシック', 'MS PGothic', sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color:#333;
+  counter-reset: count; 
+}
+* {
+  box-sizing: border-box;
+}
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.5;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+dd {
+  margin: 0;
+}
+ol {
+  list-style-type: decimal-leading-zero;
+  margin: 0;
+}
+/* モバイルヘッダー */
+.header-logo .logo {
+  width:70px;
+  height:22.97px;
+}
+header .your{
+  display: flex;
+  gap:21.67px;
+}
+header img {
+  vertical-align: bottom;
+}
+header a{
+  display: block;
+}
+.header-logo a{
+  line-height: 1;
+}
+header .wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+header {
+  padding: 0 5%;
+}
+/* モバイルのヒーローエリア */
+  /* トップ画像 */
+.topimg {
+  background-image: url(../img/shadow-blue.png);
+  background-repeat: no-repeat;
+  text-align: right;
+}
+.topimg img{
+  width: 100%;
+  height: 276px;
+  object-fit: cover;
+  vertical-align: top;  
+}
+ /* トップ文章 */
+.heroerea .wrapper {
+  padding: 0 4.8%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.heroerea .topline h2{
+  font-size: 1.875rem;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+  padding-bottom: 6px;
+  margin-top: 20px;
+}
+.heroerea span.layout {
+  display: block;
+}
+.heroerea .btn{
+  margin-top: 20px;
+  background: #8E8EAE;
+  line-height: 60px;
+}
+.heroerea .btn a{
+  color:#fff;
+  display: block;
+  padding: 0 20px;
+}
+.heroerea .btn a::after{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 1rem;
+  background-position: center;
+  margin-left: 15px;
+}
+/* モバイルの固定コールトゥーアクション */
+.heroerea .cta {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #EAF0F9;
+  z-index: 3;
+}
+.heroerea .cta-small{
+  line-height: 78px;
+  height: 78px;
+  padding-left: 5%;
+  font-size: 1.125rem;
+}
+
+.heroerea .cta-small .ctalink {
+  color: inherit;
+  display: block;
+}
+.heroerea .cta-small img{
+  width: 4rem;
+  height: 4rem;
+  vertical-align: -1.5rem;
+  margin-right: 15px;
+}
+.heroerea .cta-small .ctalink::after {
+  content: "　";
+  display: inline-block;
+  background-image: url(../img/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 25px;
+}
+.heroerea .cta .large{
+  display: none;
+}
+.heroerea .cta .largelink:hover{
+  opacity: 1;
+}
+/* モバイルのコンセプト */
+.concept {
+  padding: 0 5.3%;
+  margin-top: 100px;
+}
+.concept .wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.concept .title{
+  font-size: 1.5rem;
+}
+.concept .title::after{
+  content: "　";
+  display: block;
+  width: 1.3em;
+  border-bottom: 2px solid #8E8EAE;
+  height: 9px;
+}
+.concept .boxflow p {
+  font-size: 0.875rem;
+  margin-top: 24px;
+}
+    /* コンセプトのレイアウト部分 */
+    .concept .box{
+    position: relative;
+    }
+    .concept .box img {
+    width: 100%;
+    height: 291px;
+    object-fit: cover;
+    }
+    .concept .boxflow {
+    padding: 25px;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.07);
+    position: relative;
+    top: -28px;
+    background: #fff;
+    width: 90%;
+    margin: auto;  
+    }
+
+
+/* モバイルの商品一覧 */
+.product {
+  padding: 0 5.3% 100px;
+  margin-top: 72px;
+  /* コンセプトのテキストゾーンで上げた28pxを100pxから引いた値 */
+}
+.product .wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.product .title{
+  letter-spacing: 0.04em;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.product .title::after{
+  content:" ";
+  display: block;
+  width: 1.25em;
+  margin: auto;
+  padding-top: 12px;
+  border-bottom: 2px solid #8E8EAE;
+}
+.product .block {
+  margin-top: 40px;
+}
+.product .card-img img{
+  width: 100%;
+}
+.product .card-title {
+  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-align: center;
+  padding: 20px 0;
+}
+.product .card-discription {
+  font-size: 0.875rem;
+}
+.product .list {
+  display: flex;
+  margin: 20px 0 0;
+}
+.product .list dt::after{
+  content: "：";
+}
+.product .list dt,
+.product .list dd{
+  font-size: 0.875rem;
+  line-height: 1;
+}
+.product .list dt:nth-of-type(n+2){
+  margin-left: 30px;
+}
+.product .card .btn{
+margin-top: 20px;
+background: #8E8EAE;
+line-height: 50px;
+}
+.product .card .btn a{
+  color:#fff;
+  display: block;
+  padding: 0 17px;
+}
+.product .card .btn a::after{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width :50px;
+  height:1rem;
+  background-position: center;
+  margin-left: calc(100% - (7rem + 50px));
+}
+/* モバイルのカードレイアウト */
+.product .block {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+/* 流れ */
+.flow {
+  background: #EAF0F9;
+  padding: 50px 5.3% 50px;
+}
+.flow .wrapper {
+  background: #fff;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.flow .title{
+  letter-spacing: 0.04em;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 40px;
+}
+.flow .title::after{
+  content:" ";
+  display: block;
+  width: 1.25em;
+  margin: auto;
+  padding-top: 12px;
+  border-bottom: 2px solid #8E8EAE;
+}
+.flow .list {
+  list-style-type: none;
+  padding:0;
+}
+.flow .list img{
+  width: 55%;
+  vertical-align: bottom;
+}
+.flow .list .list-img{
+  text-align: center;
+}
+.flow .list li {
+  padding: 0 38px;
+}
+.flow .list li::before {
+  counter-increment: count; 
+  content: counter(count,decimal-leading-zero);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.375rem;
+  line-height: 1;
+  color: #8E8EAE;
+}
+.flow .list li:not(:last-child)::after{
+  content: " ";
+  display: block;
+  border-top: 30px solid #8E8EAE;
+  border-bottom: 30px solid transparent;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  margin: 30px auto 0;
+  width: 0;
+  height: 0;
+}
+.flow .list .list-title{
+  text-align: center;
+  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-top: 10px;
+  color: #000;
+}
+.flow .list .list-text{
+  margin-top: 10px;
+  font-size: 0.875rem;
+}
+/* フローのcall-to-action { */
+  .flow .btn{
+    margin: 60px 10px 0;
+    background: #8E8EAE;
+    line-height: 60px;
+  }
+  .flow .btn a{
+    color:#fff;
+    display: block;
+    padding: 0 16px;
+  }
+  .flow .btn a::after{
+    content: "";
+    display: inline-block;
+    background-image: url(../img/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 28.21px;
+    height: 1rem;
+    background-position: center;
+    margin-left: 15px;
+  }
+  .news {
+    padding: 0 5.3% 100px;
+    margin-top: 100px;
+  }
+  .news .wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .news .title{
+    letter-spacing: 0.04em;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-bottom: 40px;
+  }
+  .news .title::after{
+    content:" ";
+    display: block;
+    width: 1.25em;
+    margin: auto;
+    padding-top: 12px;
+    border-bottom: 2px solid #8E8EAE;
+  }
+  .news .list a{
+    color: inherit;
+    font-size: 0.875rem;
+  }
+  .news .time{
+    font-size: 0.875rem;
+    display: inline-block;
+    width: 102px;
+  }
+  .news .text{
+    font-size: 0.875rem;
+    width: calc(100% - 102px);
+    display: inline-block;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: text-top;
+  }
+  .news .list li {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E3E3E3;
+    line-height: 1;
+  }
+  .news .list li + li{
+    padding-top: 30px;
+  }
+
+  .news .btn{
+    margin: 60px 0 0;
+    background: #8E8EAE;
+    line-height: 60px;
+    position: relative;
+  }
+  .news .btn a{
+    color:#fff;
+    display: block;
+    padding: 0 32.46px;
+  }
+  .news .btn a::after{
+    content: "";
+    display: inline-block;
+    background-image: url(../img/arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 23.1%;
+    height: 1rem;
+    position: absolute;
+    top:36.666%;
+    right: 32.46px;
+  }
+
+  /* call-to-action */
+  .calltoaction {
+    background-image: url(../img/shadow.png);
+    padding: 64px 8% 50px;
+  }
+  .calltoaction .wrapper {
+    background: #fff;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 32px 17px 30px 18px;
+    border: 1px solid #8E8EAE;
+    box-shadow: 
+    0 4px 0 10px #fff,
+    0 -4px 0 10px #fff;
+  }
+  .calltoaction .title{
+    letter-spacing: 0.04em;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-bottom: 40px;
+  }
+  .calltoaction .title::after{
+    content:" ";
+    display: block;
+    width: 1.25em;
+    margin: auto;
+    padding-top: 12px;
+    border-bottom: 2px solid #8E8EAE;
+  }
+  .innner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .value img{
+    width: 208.4px;
+    vertical-align: bottom;
+  }
+  .special img{
+    width: 254px;
+    vertical-align: bottom;
+  }
+  .value s{
+    display: block;
+  }
+  .special::before{
+  content: " ";
+  display: block;
+  border-top: 30px solid #8E8EAE;
+  border-bottom: 30px solid transparent;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  margin: 30px auto 0;
+  width: 0;
+  height: 0;
+}
+.set {
+  border-top: 1px solid #8E8EAE;
+  position: relative;
+  margin: 40px 19px 0;
+  display: flex;
+  flex-direction: column;
+}
+.set .sub-title {
+  font-weight: normal;
+  position: absolute;
+  top:0;
+  color: #8E8EAE;
+  font-size: 1.25rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  padding: 0 10px;
+}
+.set .setimg {
+  margin: 29px 0 0;
+}
+.set img{
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  height: 159.4px;
+}
+.set .list {
+  margin-top: 19.6px;
+  font-size: 0.9375rem;
+  line-height: 1;
+}
+.set .list li::before{
+  content: "◾️";
+}
+.set .list li + li{
+  padding-top: 20px;
+}
+.set .text{
+  margin-top: 30px;
+  font-size: 1.125rem;
+  width: calc(100% + 35px);
+  transform: translateX(-17px);
+  color: #000;
+}
+.set .text .marker{
+  background: linear-gradient(transparent 50%,#E6E6FA 50%);
+}
+.calltoaction .btn{
+  margin-top: 30px;
+  background: #8E8EAE;
+  line-height: 60px;
+  position: relative;
+  margin: 35px auto 0;
+}
+.calltoaction .btn a{
+  color:#fff;
+  font-size: 0.875rem;
+  display: block;
+  padding: 0 14px;
+}
+.calltoaction .btn a::after{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30.49px;
+  height: 1rem;
+  background-position: center;
+  position: absolute;
+  right: 15.1px;
+  top: calc(50% - 0.5rem);
+}
+/* モバイルのfooter */
+.footer {
+  background: #AAAAAA;
+  padding-bottom: 50px;
+}
+.footer .wrapper{
+  max-width: 1080px;
+  margin: auto;
+}
+.footer .text {
+  margin-top: 50px;
+  text-align: center;
+  color:#fff;
+}
+.footer small{
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.footer .box{
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 70px;
+}
+.footer .gnav a{
+  color: inherit;
+}
+.footer .gnav img{
+  vertical-align: bottom;
+  height: 1.6875rem;
+}
+.footer .gnav {
+  margin: 0;
+  color: #fff;
+  display: flex;
+  align-items:  center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding-top: 70px;
+}
+.footer .gnav li:first-child{
+  position: relative;
+  top: calc(-70px + -1.878rem);
+}
+
+
+/* デスクトップ */
+@media (min-width:960px){
+  /* デスクトップのヒーローエリア */
+  .heroerea .topimg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  .topimg img{
+    width: 64%;
+    height: calc(100vh - 60px);
+    margin-left: auto;
+  } 
+  .heroerea {
+    overflow: hidden;
+    height: calc(100vh - 60px);
+  }
+  .heroerea .container {
+    position: relative;
+    top:-24px;
+    height: 100%;
+  }
+  .heroerea .topline{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+  }
+  .heroerea .topline h2{
+    font-size: 3.125rem;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    font-weight: normal;
+    padding-bottom: 40px;
+  }
+  .heroerea .topline p {
+    font-size: 1.5rem;
+  }
+  .heroerea .btn {
+    margin-top: 46px;
+    display: inline-block;
+  }
+  .heroerea .btn a{
+    font-size: 1.25rem;
+  }
+  .heroerea span.layout{
+    display: inline;
+  }
+  /* デスクトップのコールトゥーアクション */
+.heroerea .cta {
+  position: absolute;
+  right:0;
+  width: auto;
+  bottom: 46px;
+  background: transparent;
+}
+.heroerea .cta img{
+  width: 416px;
+  height: 170px;
+}
+.heroerea .cta .cta-small{
+  display: none;
+}
+.heroerea .cta .large{
+  display: block;
+}
+
+/* デスクトップのコンセプト */
+.concept .boxflow p {
+  font-size: 0.875rem;
+  margin-top: 24px;
+}
+  /* レイアウト部分 */
+  .concept .box img{
+    height: 513px;
+    width: 55%;
+  }
+  .concept .boxflow {
+    padding: 50px 82px;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.07);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right:0;
+    background: #fff;
+    width: 50%;
+    margin: auto;  
+  }
+
+/* デスクトップの商品一覧 */
+.product {
+  margin-top: 100px;
+}
+.product .title{
+  font-size: 2.125rem;
+  line-height: 1;
+  padding-bottom: 60px;
+}
+.product .title::after{
+  padding-top: 20px;
+}
+/* デスクトップのカードレイアウト */
+.product .block {
+  flex-direction: row;
+  gap: 60px;
+}
+.product .card {
+  position: relative;
+  flex: 1;
+}
+.product .card-discription{
+  padding-bottom: 105px;
+}
+.product .card-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.flow {
+  padding: 59px 0 60px;
+}
+.flow .title{
+  font-size: 2.125rem;
+  line-height: 1;
+  padding-bottom: 60px;
+}
+.flow .title::after{
+  padding-top: 20px;
+}
+.flow .wrapper{
+  padding: 61px 0 60px;
+}
+.flow .list {
+  display: flex;
+  padding: 0 70px;
+}
+.flow .list li {
+  flex:1;
+  position: relative;
+  padding: 0;
+}
+.flow .list li:not(:last-child) {
+  padding-right: 80px;
+}
+.flow .list li:not(:last-child)::after {
+  position: absolute;
+  margin: 0;
+  right: 31px;
+  top: calc(50% - 25px);
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 30px solid #8E8EAE;
+  border-right: 0;
+}
+.flow .list .list-title{
+  margin-top: 20px;
+}
+.flow .list .list-text{
+  margin-top: 20px;
+  font-size: 1rem;
+}
+.flow .btn{
+  width: 420px;
+  line-height: 70px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.flow .btn a{
+  font-size: 1.25rem;
+  padding: 0 25px;
+}
+.flow .btn a::after{
+  height: 1.25rem;
+  width: 50px;
+  vertical-align: text-bottom;
+}
+/* デスクトップのお知らせ */
+.news {
+  margin-top: 120px;
+}
+.news .title{
+  font-size: 2.125rem;
+  line-height: 1;
+  padding-bottom: 60px;
+}
+.news .title::after{
+  padding-top: 20px;
+}
+.news .list time{
+  font-size: 1rem;
+  width: 172px;
+}
+.news .list .text{
+  font-size: 1rem;
+  width: calc(100% - 172px);
+}
+.news .list li{
+  padding-bottom: 40px;
+}
+.news .list li + li{
+  padding-top: 40px;
+}
+.news .btn{
+  width: 320px;
+  line-height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.news .btn a{
+  font-size: 1rem;
+  padding: 0 30px;
+}
+.news .btn a::after{
+  height: 1rem;
+  width: 50px;
+  vertical-align: text-bottom;
+}
+
+/* デスクトップのcall-to-action */
+.calltoaction {
+  padding: 82px 0 83px;
+}
+.calltoaction .wrapper {
+  padding: 40px 0;
+  box-shadow: 
+  0 -2px 0 20px #fff,
+  0 0px 0 20px #fff;
+}
+.calltoaction .title{
+  font-size: 2.125rem;
+  line-height: 1;
+  padding-bottom: 60px;
+}
+.calltoaction .title::after{
+  padding-top: 20px;
+}
+.innner {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  text-align: left;
+  justify-content: center;
+}
+.calltoaction .value {
+  align-self: flex-end
+}
+.calltoaction .special{
+  padding-left: 40px;
+}
+.value img{
+  width:319.4px;
+}
+.special img{
+  width: 469.6px;
+}
+.calltoaction .special::before {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  left: -19.5px;
+  bottom: 23%;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 30px solid #8E8EAE;
+  border-right: 0;
+}
+.set {
+  width: 600px;
+  border: 1px solid #8E8EAE;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  margin-top: 49px;
+  align-items: center;
+}
+.set .setimg{
+  margin-top: 0;
+}
+.set .list {
+  margin: 0;
+}
+.set .setimg img{
+  width: 241.51px;
+  height: 160px;
+}
+.set .text {
+  margin-top: 30px;
+  transform: none;
+}
+.calltoaction .btn {
+  width: 420px;
+  line-height: 70px;
+  margin-top: 50px;
+}
+.calltoaction .btn a{
+  font-size: 1.25rem;
+  padding: 0 25px;
+}
+.calltoaction .btn a::after{
+  height: 1.25rem;
+  width: 50px;
+  vertical-align: text-bottom;
+}
+.calltoaction .line {
+  margin-left: 30.49px;
+}
+/* デスクトップのフッター */
+.footer {
+  padding-bottom: 30px;
+}
+.footer .text {
+  margin-top: 120px;
+}
+.footer .gnav {
+  flex-direction: row;
+  gap: 40px;
+}
+.footer .gnav li:first-child{
+  position: static;
+  margin-right: 20px;
+}
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+}

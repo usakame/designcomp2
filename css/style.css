@@ -81,7 +81,6 @@ header {
 }
  /* トップ文章 */
 .heroerea .wrapper {
-  padding: 0 4.8%;
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -582,7 +581,7 @@ line-height: 50px;
 /* モバイルのfooter */
 .footer {
   background: #AAAAAA;
-  padding-bottom: 50px;
+  paddinge: 0 5.3% 50px;
 }
 .footer .wrapper{
   max-width: 1080px;
@@ -649,6 +648,7 @@ line-height: 50px;
     position: relative;
     top:-24px;
     height: 100%;
+    padding: 0 5.3%;
   }
   .heroerea .topline{
     position: relative;
@@ -676,9 +676,9 @@ line-height: 50px;
   .heroerea span.layout{
     display: inline;
   }
-  /* デスクトップのコールトゥーアクション */
+  /* デスクトップの固定CTA */
 .heroerea .cta {
-  position: absolute;
+  position: fixed;
   right:0;
   width: auto;
   bottom: 46px;

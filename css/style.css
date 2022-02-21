@@ -83,6 +83,7 @@ header {
 .heroerea .wrapper {
   max-width: 1180px;
   margin: 0 auto;
+  padding: 0 5.3%;
 }
 .heroerea .topline h2{
   font-size: 1.875rem;
@@ -634,6 +635,9 @@ line-height: 50px;
     top: 0;
     right: 0;
     width: 100%;
+  }
+  .heroerea .wrapper {
+    padding:0;
   }
   .topimg img{
     width: 64%;
